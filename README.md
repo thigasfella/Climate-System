@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Climate System
 
-## Getting Started
+Este é um aplicativo de previsão do tempo desenvolvido em React utilizando Next.js. Ele permite que os usuários selecionem uma cidade e visualizem a previsão do tempo atual, incluindo temperatura, umidade, chance de chuva e velocidade do vento.
 
-First, run the development server:
+## Tecnologias Utilizadas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: Biblioteca para construção da interface.
+- **Next.js**: Framework React para renderização no servidor e otimização de performance.
+- **TypeScript**: Tipagem estática para JavaScript.
+- **React Toastify**: Biblioteca para exibição de notificações.
+- **CSS Modules**: Estilos encapsulados com CSS Modules.
+- **APIs**: 
+  - Previsão do tempo via API com base na cidade selecionada.
+  - IBGE para listar as cidades brasileiras.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Como Usar
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone este repositório em sua máquina local:
+   ```bash
+   git clone https://github.com/thigasfella/Climate-System.git
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. Navegue até o diretório do projeto:
+    - cd nome-do-repositorio
 
-## Learn More
+3. Instale as dependências do projeto:
+    - npm install
 
-To learn more about Next.js, take a look at the following resources:
+4. Crie um arquivo .env.local na raiz do projeto e adicione suas variáveis de ambiente: 
+    - NEXT_PUBLIC_BASE_URL=URL_DA_API
+    - NEXT_PUBLIC_API_KEY=SUA_CHAVE_API
+    - Inicie o servidor de desenvolvimento:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. npm run dev
+    - Acesse o aplicativo no seu navegador em http://localhost:3000.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+ - Funcionalidades
+ - Seleção de cidades através de um dropdown.
+ - Exibição de dados como:
+ - Temperatura atual
+ - Temperatura mínima e máxima
+ - Umidade
+ - Velocidade do vento
+ - Chance de chuva
+ - Feedback visual utilizando barras de progresso para representar os dados.

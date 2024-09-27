@@ -1,0 +1,199 @@
+/* Contêiner principal que centraliza todo o conteúdo da página */
+.containerAll {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100vh;
+}
+
+/* Contêiner que engloba os dados do clima, com estilo de sombra e bordas arredondadas */
+.divContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-white);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    width: 450px;
+    height: 450px;
+    border-radius: 0.5rem;
+}
+.containerSelect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.select{
+    font-family: var(--font-lexend);
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+}
+/* Estilização para a seção de título que inclui a cidade e a descrição */
+.divTitle {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    text-align: justify;
+    color: var(--color-grey);
+}
+
+/* Estilização do nome da cidade, com fonte menor e peso leve */
+.Namecity {
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+.titleSelect{
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+/* Estilização do título principal, com fonte de 1rem e peso mais leve */
+.title {
+    font-size: 0.8rem;
+    font-weight: 200;
+}
+
+/* Contêiner que organiza todos os dados meteorológicos */
+.containerAllData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contêiner para cada conjunto de dados meteorológicos, com bordas arredondadas e margens */
+.containerData {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15%;
+    width: 93%;
+    border-radius: 0.5rem;
+    margin: 1rem;
+    border-bottom: 0.2rem solid var(--color-card);
+    transition: 500ms ease-in-out;
+}
+
+/* Efeito hover que altera o fundo do contêiner de dados */
+.containerData:hover {
+    background-color: var(--color-card);
+}
+
+/* Define a exibição dos dados de tipo e valor, alinhando-os com espaçamento */
+.containerData {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Contêiner que organiza os valores máximos e mínimos de temperatura, vento, etc. */
+.maxMin {
+    display: flex;
+    gap: 7rem;
+}
+
+/* Estilos para as seções de valor mínimo e máximo */
+.min,
+.max {
+    font-size: 0.7rem;
+}
+
+/* Estiliza o valor principal (temperatura, umidade, etc.), com fonte grande e leve */
+.value {
+    color: var(--color-blue);
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
+/* Define o tipo de dado meteorológico (Chuva, Temperatura, etc.) */
+.type {
+    font-size: 0.7rem;
+}
+
+/* Define a disposição dos dados de tipo e valor para serem exibidos em coluna */
+.typeDataAndValue {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Contêiner para organizar as barras de progresso e os valores máximo e mínimo */
+.maxMinProgressBarContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    margin: 1rem;
+}
+
+/* Contêiner para a barra de progresso, definindo largura e altura */
+.DivprogressBar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 13px;
+    background-color: var(--color-transparent);
+    border-radius: 0.5rem;
+}
+
+/* Estilização da barra de progresso, com altura e transição suave */
+.progressBar {
+    height: 13px;
+    background-color: var(--color-orange);
+    border-radius: 0.5rem;
+    transition: 1s ease-in-out;
+}
+
+/* Contêiner que organiza a barra de progresso e a mensagem de alerta */
+.bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media (max-width: 480px) {
+    .divContent{
+        width: 350px;
+        height: 420px;
+    }
+    .title{
+        font-size: 0.6rem
+    }
+    .Namecity{
+        font-size: 0.5rem;
+    }
+    .value{
+        font-size: 1.2rem;
+    }
+    .type{
+        font-size: 0.6rem;
+    }
+    .min,
+    .max{
+        font-size: 0.6rem;
+    }
+    .maxMin{
+        font-size: 0.6rem;
+    }
+    .DivprogressBar{
+        height: 10px;
+    }
+    .progressBar{
+        height: 10px;
+    }
+    .select{
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+    }
+    .titleSelect{
+        font-size: 0.7rem;
+        font-weight: 200;
+    }
+}
