@@ -14,7 +14,15 @@ export default function Home() {
   const [city, setCity] = useState('goiania'); // Estado para a cidade
   const [cities, setCities] = useState<City[]>([]); // Estado para armazenar cidades
 
-  const forecast = `${process.env.NEXT_PUBLIC_BASE_URL}/forecast.json?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${city}`;
+  const normalizeString = (str: string) => {
+    const normalizedStr = str
+      .normalize('NFD') // normalizando removendo os caracteres especiais
+      .replace(/[\u0300-\u036f]/g, '') // removo acentos
+      .toLowerCase(); // Aqui eu converto pra minuscula
+      return normalizedStr;
+  };
+
+  const forecast = `${process.env.NEXT_PUBLIC_BASE_URL}/forecast.json?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${normalizeString(city)}`;
 
   const [temperature, setTemperature] = useState(null);
   const [minTemperature, setMinTemperature] = useState(0);
